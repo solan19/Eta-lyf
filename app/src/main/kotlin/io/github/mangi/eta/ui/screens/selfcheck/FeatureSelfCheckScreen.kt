@@ -343,7 +343,7 @@ private suspend fun runSelfCheck(context: Context): SelfCheckReport {
             val packInfo = runCatching {
                 io.github.mangi.eta.data.repository.AutoBackupRunner
                     .backups(settings.autoBackupDirectory)
-                    .firstOrNull { io.github.mangi.eta.data.repository.EtaFullBackup.isFullBackup(it.name) }
+                    .firstOrNull { it.name.endsWith(".zip") }
                     ?.let { file ->
                         val mb = String.format(java.util.Locale.US, "%.1f", file.length() / 1048576.0)
                         val hasDb = java.util.zip.ZipFile(file).use { zip ->

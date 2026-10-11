@@ -24,31 +24,31 @@ class EtaFluidCloudProvider : SeedlingCardWidgetProvider() {
     private val tag = "EtaFluidCloudProvider"
 
     override fun onCardCreate(context: android.content.Context, card: SeedlingCard) {
-        Logger.i(tag, "onCardCreate card=${card.getServiceId()}")
+        Logger.i(tag, "onCardCreate card=${card.serviceId}")
     }
 
     override fun onShow(context: android.content.Context, card: SeedlingCard) {
-        Logger.i(tag, "onShow card=${card.getServiceId()}")
+        Logger.i(tag, "onShow card=${card.serviceId}")
     }
 
     override fun onHide(context: android.content.Context, card: SeedlingCard) {
-        Logger.i(tag, "onHide card=${card.getServiceId()}")
+        Logger.i(tag, "onHide card=${card.serviceId}")
     }
 
     override fun onDestroy(context: android.content.Context, card: SeedlingCard) {
-        Logger.i(tag, "onDestroy card=${card.getServiceId()}")
+        Logger.i(tag, "onDestroy card=${card.serviceId}")
     }
 
-    override fun onUpdateData(context: android.content.Context, card: SeedlingCard, data: Bundle?) {
-        Logger.i(tag, "onUpdateData card=${card.getServiceId()}")
+    override fun onUpdateData(context: android.content.Context, card: SeedlingCard, data: Bundle) {
+        Logger.i(tag, "onUpdateData card=${card.serviceId}")
     }
 
     override fun onSubscribed(context: android.content.Context, card: SeedlingCard) {
-        Logger.i(tag, "onSubscribed card=${card.getServiceId()}")
+        Logger.i(tag, "onSubscribed card=${card.serviceId}")
     }
 
     override fun onUnSubscribed(context: android.content.Context, card: SeedlingCard) {
-        Logger.i(tag, "onUnSubscribed card=${card.getServiceId()}")
+        Logger.i(tag, "onUnSubscribed card=${card.serviceId}")
     }
 
     override fun onCardObserve(context: android.content.Context, clientName: String, cards: List<SeedlingCard>) {

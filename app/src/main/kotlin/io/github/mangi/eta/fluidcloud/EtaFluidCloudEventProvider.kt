@@ -23,7 +23,7 @@ class EtaFluidCloudEventProvider : SeedlingCardEventProvider() {
             "errorMsg=${cardErrorInfo.errorMsg}")
     }
 
-    override fun onServiceClose(serviceId: String, reason: String, serviceInstanceId: String, extra: String) {
-        Logger.w(tag, "onServiceClose serviceId=$serviceId reason=$reason instanceId=$serviceInstanceId extra=$extra")
+    override fun onServiceClose(serviceId: String?, reason: String?, serviceInstanceId: String?, extra: String?) {
+        Logger.e(tag, "onServiceClose serviceId=$serviceId reason=$reason instanceId=$serviceInstanceId extra=$extra")
     }
 }
