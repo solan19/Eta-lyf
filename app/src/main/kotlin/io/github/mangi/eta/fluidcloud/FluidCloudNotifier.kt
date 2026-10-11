@@ -5,6 +5,7 @@ import com.oplus.pantanal.seedling.bean.SeedlingCard
 import com.oplus.pantanal.seedling.update.SeedlingCardOptions
 import com.oplus.pantanal.seedling.util.SeedlingTool
 import org.json.JSONObject
+import kotlinx.coroutines.runBlocking
 
 /**
  * ColorOS 流体云通知管理器。
@@ -131,7 +132,9 @@ object FluidCloudNotifier {
             val options = SeedlingCardOptions().apply {
                 if (requestShowPanel != null) this.requestShowPanel = requestShowPanel
             }
-            SeedlingTool.INSTANCE.updateData(card, businessData, options)
+            runBlocking {
+                SeedlingTool.updateData(card, businessData, options)
+            }
         }
     }
 }
