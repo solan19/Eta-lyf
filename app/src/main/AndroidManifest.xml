@@ -245,6 +245,25 @@
             android:exported="true"
             android:grantUriPermissions="false"
             android:permission="android.permission.MANAGE_ACCESSIBILITY" />
+        <!-- ColorOS 14+ 流体云（泛在服务）WidgetProvider：接收卡片生命周期与数据更新回调。
+             只在 ColorOS 泛在服务存在时生效；非 ColorOS 设备上系统忽略此声明。 -->
+        <provider
+            android:name=".fluidcloud.EtaFluidCloudProvider"
+            android:authorities="io.github.mangi.eta.seedling.widget"
+            android:enabled="true"
+            android:exported="true">
+            <meta-data
+                android:name="com.oplus.pantanal.seedling.card.config"
+                android:resource="@xml/eta_fluid_cloud_config" />
+        </provider>
+
+        <!-- ColorOS 流体云事件 Provider：接收卡片创建失败与服务关闭事件。 -->
+        <provider
+            android:name=".fluidcloud.EtaFluidCloudEventProvider"
+            android:authorities="io.github.mangi.eta.seedling.event"
+            android:enabled="true"
+            android:exported="true" />
+
     </application>
 
 </manifest>

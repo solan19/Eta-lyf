@@ -71,6 +71,7 @@ class EtaApp : Application(), XposedServiceHelper.OnServiceListener {
         AgentMemoryRepository.init(this)
         ProviderRepository.init(this)
         McpServerRepository.init(this)
+        io.github.mangi.eta.fluidcloud.FluidCloudNotifier.init(this)
         // 悬浮胶囊常驻：上次开着就继续挂上，没有任务时显示空闲。
         applicationScope.launch(Dispatchers.IO) {
             val pinned = runCatching { SettingsDataStore.settings().overlayCapsulePinned }.getOrDefault(false)

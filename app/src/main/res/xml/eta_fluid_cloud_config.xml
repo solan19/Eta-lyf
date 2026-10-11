@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cards>
+    <!-- 智能体执行胶囊 -->
+    <card
+        name="eta_execution"
+        type="notification_sm"
+        upkPath="upk/eta_execution/eta_execution.upk"
+        platform-version="2000000"
+        targetPkgName="io.github.mangi.eta" />
+
+    <!-- 虚拟屏运行胶囊 -->
+    <card
+        name="eta_virtual_screen"
+        type="notification_sm"
+        upkPath="upk/eta_virtual_screen/eta_virtual_screen.upk"
+        platform-version="2000000"
+        targetPkgName="io.github.mangi.eta" />
+
+    <!-- 运行进度大胶囊 -->
+    <card
+        name="eta_run_progress"
+        type="notification_md"
+        upkPath="upk/eta_run_progress/eta_run_progress.upk"
+        platform-version="2000000"
+        targetPkgName="io.github.mangi.eta" />
+
+    <!-- 自动化任务胶囊 -->
+    <card
+        name="eta_automation_jobs"
+        type="notification_sm"
+        upkPath="upk/eta_automation/eta_automation.upk"
+        platform-version="2000000"
+        targetPkgName="io.github.mangi.eta" />
+
+    <!-- 自动化失败大胶囊 -->
+    <card
+        name="eta_automation_failures"
+        type="notification_md"
+        upkPath="upk/eta_automation_fail/eta_automation_fail.upk"
+        platform-version="2000000"
+        targetPkgName="io.github.mangi.eta" />
+
+    <!-- 任务完成面板 -->
+    <card
+        name="eta_task_completion"
+        type="notification_lg"
+        upkPath="upk/eta_completion/eta_completion.upk"
+        platform-version="2000000"
+        targetPkgName="io.github.mangi.eta" />
+
+    <!-- 需要用户同意主屏操作胶囊 -->
+    <card
+        name="eta_ui_fallback"
+        type="notification_sm"
+        upkPath="upk/eta_ui_fallback/eta_ui_fallback.upk"
+        platform-version="2000000"
+        targetPkgName="io.github.mangi.eta" />
+</cards>

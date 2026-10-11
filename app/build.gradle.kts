@@ -188,6 +188,10 @@ dependencies {
     testImplementation(libs.json)
     testImplementation(libs.room.testing)
     testImplementation(libs.robolectric)
+
+    // OPPO ColorOS 流体云 SDK（泛在服务）— AAR 本地集成
+    // SHA-256: a4b268fd661d4095528e8fee7a31af57f57721644090c47e3ca6be17992619c7
+    implementation(files("libs/seedling-support-lite-3.0.7.aar"))
 }
 
 // Compose 编译器会额外生成「Compose 映射报告」任务：只产出报告，不影响 APK 内容，
